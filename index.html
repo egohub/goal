@@ -71,7 +71,7 @@
         '$http',
         function ($scope, $http) {
           $http.get('https://egoscore.herokuapp.com/live').then(function (response) {
-            $scope.myData = response.data.sportItem.tournaments;
+            $scope.myData = response.data;
           });
         }
       ]);
