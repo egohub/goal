@@ -38,20 +38,7 @@
       </div>
 
       <div class="theData">
-        <!-- <div ng-repeat="child in myData">
-                Tournaments:{{child.tournament.name | json}}
-                category : {{child.category.name}}
-          <div ng-repeat="x in child.events">
-            mins :{{x.statusDescription}}
-            Home:
-            {{x.homeTeam.name}}
-            Score:{{x.homeScore.current}}<br>
-            Away:
-            {{x.awayTeam.name}}
-            Score:
-            {{x.awayScore.current}}
-          </div>
-        </div> -->
+       
         <table ng-repeat="child in myData">
           
           <tr>
@@ -70,34 +57,7 @@
         
       </div>
     </div>
-    <!-- <div ng-repeat="x in child.tournaments.tournament">
-            <pre>
-              {{x.name}}
-            </pre>
-            <!-- <ul>
-              <li>
-                <strong>{{ x.tournament.name }}</strong>
-              </li>
-
-            </ul>
-              <ul ng-repeat="y in x.tournament">
-                <li>{{ y.name }}:
-                  <span class="perc per1">{{ y.percentage | toPercent }}</span>
-                </li>
-                <ul ng-repeat="z in y.children">
-                  <li>{{ z.name }}:
-                    <span class="perc per2">{{ z.percentage | toPercent }}</span>
-                  </li>
-                  <ul ng-repeat="q in z.children" ng-show="showMore">
-                    <li>{{ q.name }}:
-                      <span class="perc per3">{{ q.percentage | toPercent }}</span>
-                    </li>
-                  </ul>
-              </ul>
-          </ul>
-            </ul>
-
-          </div> -->
+   
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
 
@@ -110,7 +70,7 @@
         '$scope',
         '$http',
         function ($scope, $http) {
-          $http.get('http://www.sofascore.com/football/livescore/json?timezone=6.5').then(function (response) {
+          $http.get('https://www.sofascore.com/football/livescore/json?timezone=6.5').then(function (response) {
             $scope.myData = response.data.sportItem.tournaments;
           });
         }
