@@ -1,0 +1,16 @@
+img{
+  width: 20px;
+}
+.nav-wrapper{
+  background-color: #3949AB;
+}
+.nav-content{
+  background-color: #7986CB ;
+}
+.min {
+  text-align: left;
+  color: green;
+}
+.score{
+  text-align: center;
+}
